@@ -151,6 +151,7 @@ code {
   background-color: rgb(255, 230, 89);
   width: 100%;
   height: 100%;
+  resize: none;
 }
 
 .noteContainer textarea:active,
