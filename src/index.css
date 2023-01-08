@@ -1,0 +1,145 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.agbaContainer {
+  min-height: 100vh;
+}
+
+.agbaContainer.dark-mode {
+  background-color: black;
+}
+
+.agbaContainer.dark-mode h1 {
+  color: #fff;
+}
+
+.agbaContainer.dark-mode .moon {
+  color: #fff;
+}
+
+.container {
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.headerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.moon {
+  cursor: pointer;
+}
+
+.searchContainer {
+  margin: 5px 0 20px 0;
+  background-color: rgb(212, 210, 210);
+  padding: 10px 5px;
+  border-radius: 10px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.searchContainer input {
+  border: 0;
+  font-size: 1rem;
+  padding: 5px;
+  background-color: rgb(212, 210, 210);
+  padding-left: 30px;
+  width: 100%;
+}
+
+.searchContainer .search {
+  font-size: 1.4em;
+  position: absolute;
+}
+
+.searchContainer input:active,
+.searchContainer input:focus {
+  outline: none;
+}
+
+.wrapper {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+
+.noteContainer {
+  position: relative;
+  min-height: 170px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: rgb(255, 230, 89);
+  border-radius: 10px;
+  padding: 1rem;
+  font-size: 1.1rem;
+  font-family: cursive;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+}
+
+.note-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.note-footer .delete {
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+/* .hoverClass:hover {
+  filter: blur(3px);
+} */
+
+/* .hoverClass::after {
+  content: "Click to edit";
+  position: absolute;
+  right: 5px;
+} */
+
+.noteContainer.new {
+  background-color: aqua;
+}
+
+.noteContainer.new textarea {
+  background-color: aqua;
+  border: 0;
+  resize: none;
+}
+
+.noteContainer.new textarea:active,
+.noteContainer.new textarea:focus {
+  outline: none;
+}
+
+.note-footer .save {
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
