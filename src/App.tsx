@@ -13,6 +13,7 @@ const App = () => {
   const [darkMode, setDarkMode] = useState<boolean>(false);
   const wordCount = 200;
 
+  // Date formatter function
   const dateFunc = () => {
     const date = new Date();
     const day = date.getDate();

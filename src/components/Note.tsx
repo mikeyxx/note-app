@@ -16,6 +16,7 @@ const Note = ({ note, handleDelete, wordCount, setNotes, notes }: Props) => {
   const textRef = useRef<HTMLTextAreaElement>(null);
 
   const handleChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
+    // So that wordcount remaining count stops at zero
     if (wordCount - event.target.value.length >= 0) {
       setEditText(event.target.value);
     }
