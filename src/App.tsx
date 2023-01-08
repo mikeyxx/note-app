@@ -1,10 +1,10 @@
 import { useState } from "react";
 import AddNote from "./components/AddNote";
-import Note from "./components/Note";
 import { NoteTemp } from "./components/template";
 import { v4 as uuidv4 } from "uuid";
 import SearchComp from "./components/SearchComp";
 import Header from "./components/Header";
+import NoteList from "./components/NoteList";
 
 const App = () => {
   const [note, setNote] = useState<string>("");
@@ -37,11 +37,13 @@ const App = () => {
         <Header setDarkMode={setDarkMode} darkMode={darkMode} />
         <SearchComp setSearch={setSearch} />
         <div className="wrapper">
-          <Note
+          <NoteList
             notes={notes.filter((note) =>
               note.note.toLowerCase().includes(search)
             )}
             handleDelete={handleDelete}
+            wordCount={wordCount}
+            setNotes={setNotes}
           />
           <AddNote
             note={note}
