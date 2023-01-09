@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import AddNote from "./components/AddNote";
 import { NoteTemp } from "./components/template";
 import { v4 as uuidv4 } from "uuid";
@@ -29,9 +29,23 @@ const App = () => {
     }
   };
 
+  // Retrieve the local storage data
+  let noteValue = localStorage.getItem("note");
+
+  useEffect(() => {
+    if (noteValue) {
+      setNotes(JSON.parse(noteValue));
+    }
+  }, []);
+
   const handleDelete = (id: string) => {
     setNotes(notes.filter((note) => note.id !== id));
   };
+
+  useEffect(() => {
+    localStorage.setItem("note", JSON.stringify(notes));
+  }, [notes]);
+
   return (
     <div className={`agbaContainer ${darkMode ? "dark-mode" : ""}`}>
       <div className="container">
