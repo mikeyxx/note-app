@@ -4,11 +4,11 @@ Note App
 
 ## Overview
 
-Write down your thoughts or ideas on the note app so that you can stay organized and git your creativity flowing
+Write down your thoughts or ideas on the note app so that you can stay organized and get your creativity flowing
 
 ### Feature
 
-Built with TypeScript, type, edit, delete and search for your saved notes using the desktop Note application
+Built with TypeScript. Type, edit, delete and search for your saved notes using the desktop Note application
 
 ### Running the application on your local device
 
