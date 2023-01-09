@@ -46,6 +46,7 @@ code {
   max-width: 960px;
   margin-left: auto;
   margin-right: auto;
+  padding: 0 13px;
 }
 
 /* Header container style */
