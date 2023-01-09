@@ -20,3 +20,6 @@ Built with TypeScript. Type, edit, delete and search for your saved notes using 
 ### Dependencies
 
 This project was bootstrapped with Create React App, using TypeScript
+
+### Live Site
+https://note-app-tsx.netlify.app/
