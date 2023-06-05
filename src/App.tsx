@@ -47,8 +47,8 @@ const App = () => {
   }, [notes]);
 
   return (
-    <div className={`agbaContainer ${darkMode ? "dark-mode" : ""}`}>
-      <div className="container">
+    <main className={`agbaContainer ${darkMode ? "dark-mode" : ""}`}>
+      <section className="container">
         <Header setDarkMode={setDarkMode} darkMode={darkMode} />
         <SearchComp setSearch={setSearch} />
         <div className="wrapper">
@@ -67,8 +67,8 @@ const App = () => {
             handleSave={handleSave}
           />
         </div>
-      </div>
-    </div>
+      </section>
+    </main>
   );
 };
 

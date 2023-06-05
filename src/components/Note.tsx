@@ -36,7 +36,7 @@ const Note = ({ note, handleDelete, wordCount, setNotes, notes }: Props) => {
   return (
     <>
       {edit ? (
-        <div className="noteContainer">
+        <main className="noteContainer">
           <textarea
             ref={textRef}
             value={editText}
@@ -48,9 +48,12 @@ const Note = ({ note, handleDelete, wordCount, setNotes, notes }: Props) => {
               Save
             </button>
           </div>
-        </div>
+        </main>
       ) : (
-        <div className="noteContainer hoverClass" onClick={() => setEdit(true)}>
+        <main
+          className="noteContainer hoverClass"
+          onClick={() => setEdit(true)}
+        >
           <span>{note.note}</span>
           <div className="note-footer">
             <small>{note.date}</small>
@@ -60,7 +63,7 @@ const Note = ({ note, handleDelete, wordCount, setNotes, notes }: Props) => {
             />
           </div>
           <span className="edit">Click to edit</span>
-        </div>
+        </main>
       )}
     </>
   );

@@ -15,7 +15,7 @@ const AddNote = ({ note, setNote, wordCount, handleSave }: Props) => {
     }
   };
   return (
-    <div className="noteContainer new">
+    <main className="noteContainer new">
       <textarea
         value={note}
         onChange={handleChange}
@@ -29,7 +29,7 @@ const AddNote = ({ note, setNote, wordCount, handleSave }: Props) => {
           Save
         </button>
       </div>
-    </div>
+    </main>
   );
 };
 

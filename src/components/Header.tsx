@@ -8,7 +8,7 @@ interface Props {
 
 const Header = ({ darkMode, setDarkMode }: Props) => {
   return (
-    <div className="headerContainer">
+    <main className="headerContainer">
       <h1>Notes</h1>
       {darkMode ? (
         <BsFillSunFill
@@ -23,7 +23,7 @@ const Header = ({ darkMode, setDarkMode }: Props) => {
           onClick={() => setDarkMode((prev) => !prev)}
         />
       )}
-    </div>
+    </main>
   );
 };
 
